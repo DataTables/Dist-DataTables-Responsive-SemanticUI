@@ -3,8 +3,8 @@
     "version": "2.1.1",
     "description": "Responsive for DataTables with styling for [Semantic UI](http://semantic-ui.com/)",
     "files": [
-        "js/responsive.semanticui.js",
-        "css/responsive.semanticui.css"
+        "css/**/*.css",
+        "js/**/*.js"
     ],
     "main": "./js/responsive.semanticui.js",
     "keywords": [
