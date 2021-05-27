@@ -1,13 +1,15 @@
 {
-    "css": [
-        "css/responsive.semanticui.css",
-        "css/responsive.semanticui.min.css"
-    ],
     "js": [
         "js/responsive.semanticui.js",
         "js/responsive.semanticui.min.js"
     ],
+    "css": [
+        "css/responsive.semanticui.css",
+        "css/responsive.semanticui.min.css"
+    ],
+    "types": [
+        "types/responsive.semanticUI.d.ts"
+    ],
     "src-repo": "http://github.com/DataTables/Responsive",
-    "last-sync": "8fc71ec25bce761fc0cb2c7030ca7d9dc2f0c7ab",
     "last-tag": "2.2.7"
 }
