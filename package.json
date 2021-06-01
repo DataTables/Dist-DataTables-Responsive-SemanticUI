@@ -3,6 +3,7 @@
     "description": "Responsive for DataTables with styling for [SemanticUI](https://semantic-ui.com/)",
     "main": "js/responsive.semanticui.js",
     "style": "css/responsive.semanticui.css",
+    "types": "./types/responsive.semanticUI.d.ts",
     "version": "2.2.7",
     "files": [
         "css/**/*.css",
