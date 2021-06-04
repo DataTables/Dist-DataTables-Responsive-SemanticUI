@@ -4,7 +4,7 @@
     "main": "js/responsive.semanticui.js",
     "style": "css/responsive.semanticui.css",
     "types": "./types/responsive.semanticUI.d.ts",
-    "version": "2.2.7",
+    "version": "2.2.8",
     "files": [
         "css/**/*.css",
         "js/**/*.js"
@@ -12,8 +12,8 @@
     "keywords": [
         "Responsive",
         "Semantic",
- "SemanticUI",
- "Semantic UI",
+        "SemanticUI",
+        "Semantic UI",
         "Datatables",
         "jQuery",
         "table",
@@ -21,9 +21,9 @@
         "sort"
     ],
     "dependencies": {
-        "datatables.net-responsive": ">=2.2.7",
-        "datatables.net-se": ">=1.10.24",
-        "jquery": ">=1.7"
+        "jquery": ">=1.7",
+        "datatables.net-se": "^1.10.15",
+        "datatables.net-responsive": "2.2.8"
     },
     "moduleType": [
         "globals",
