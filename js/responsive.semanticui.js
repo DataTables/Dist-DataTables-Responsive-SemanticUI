@@ -1,4 +1,4 @@
-/*! Bootstrap integration for DataTables' Responsive
+/*! Semantic UI integration for DataTables' Responsive
  * ©2015-2016 SpryMedia Ltd - datatables.net/license
  */
 
@@ -68,8 +68,13 @@ _display.modal = function ( options ) {
 				if (! _modal.parent().hasClass('dimmer')) {
 					_modal.appendTo( 'body' )
 				}
-
-				_modal.modal('show');
+				if ( options && options.modalSettings && typeof options.modalSettings === 'object') {
+					_modal.modal(options.modalSettings).modal('show');
+				}
+				else {
+					_modal.modal('show');
+				}
+				
 			}
 		}
 	};
