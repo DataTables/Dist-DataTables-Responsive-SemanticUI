@@ -5,7 +5,7 @@
     "module": "js/responsive.semanticui.mjs",
     "style": "css/responsive.semanticui.css",
     "types": "./types/types.d.ts",
-    "version": "2.3.0",
+    "version": "2.4.0",
     "files": [
         "css/**/*.css",
         "js/**/*.js",
@@ -15,8 +15,8 @@
     "keywords": [
         "Responsive",
         "Semantic",
- "SemanticUI",
- "Semantic UI",
+        "SemanticUI",
+        "Semantic UI",
         "Datatables",
         "jQuery",
         "table",
