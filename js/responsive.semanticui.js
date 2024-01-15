@@ -1,4 +1,4 @@
-/*! Bootstrap integration for DataTables' Responsive
+/*! Fomantic integration for DataTables' Responsive
  * © SpryMedia Ltd - datatables.net/license
  */
 
@@ -47,7 +47,7 @@
 		// Browser
 		factory( jQuery, window, document );
 	}
-}(function( $, window, document, undefined ) {
+}(function( $, window, document ) {
 'use strict';
 var DataTable = $.fn.dataTable;
 
@@ -70,6 +70,12 @@ _display.modal = function (options) {
 			return _original(row, update, render, closeCallback);
 		}
 		else {
+			var rendered = render();
+
+			if (rendered === false) {
+				return false;
+			}
+
 			if (!update) {
 				if (options && options.header) {
 					_modal
@@ -78,14 +84,22 @@ _display.modal = function (options) {
 						.append('<h4 class="title">' + options.header(row) + '</h4>');
 				}
 
-				_modal.find('div.content').empty().append(render());
+				_modal.find('div.content').empty().append(rendered);
 
 				// Only need to attach the first time
 				if (!_modal.parent().hasClass('dimmer')) {
 					_modal.appendTo('body');
 				}
 
-				_modal.modal('show');
+				_modal
+					.modal({
+						onHide: closeCallback
+					})
+					.modal('show');
+			}
+			else {
+				// Modal not shown for this row - do nothing
+				return false;
 			}
 
 			return true;
