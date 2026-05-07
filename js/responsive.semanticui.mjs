@@ -1,18 +1,16 @@
-/*! Fomantic integration for DataTables' Responsive
- * © SpryMedia Ltd - datatables.net/license
+/*! Responsive Fomantic styling 4.0.0-beta.1 for DataTables
+ * Copyright (c) SpryMedia Ltd - datatables.net/license
  */
 
-import jQuery from 'jquery';
 import DataTable from 'datatables.net-se';
 import Responsive from 'datatables.net-responsive';
 
-// Allow reassignment of the $ variable
-let $ = jQuery;
 
-
+// Note that Fomantic's JS depends upon jQuery, so we use it here
+var jq = DataTable.use('jq');
 var _display = DataTable.Responsive.display;
 var _original = _display.modal;
-var _modal = $(
+var _modal = jq(
 	'<div class="ui modal" role="dialog">' +
 		'<div class="header">' +
 		'<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
@@ -23,7 +21,7 @@ var _modal = $(
 
 _display.modal = function (options) {
 	return function (row, update, render, closeCallback) {
-		if (!$.fn.modal) {
+		if (!jq.fn.modal) {
 			return _original(row, update, render, closeCallback);
 		}
 		else {
@@ -66,3 +64,4 @@ _display.modal = function (options) {
 
 
 export default DataTable;
+
