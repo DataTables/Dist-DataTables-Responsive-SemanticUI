@@ -1,4 +1,4 @@
-/*! Responsive Fomantic styling 4.0.0-beta.1 for DataTables
+/*! Responsive Fomantic styling 4.0.0 for DataTables
  * Copyright (c) SpryMedia Ltd - datatables.net/license
  */
 import DataTable from"datatables.net-se";import Responsive from"datatables.net-responsive";var jq=DataTable.use("jq"),_display=DataTable.Responsive.display,_original=_display.modal,_modal=jq('<div class="ui modal" role="dialog"><div class="header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="content"/></div>');_display.modal=function(t){return function(a,e,d,l){var o;return jq.fn.modal?!1!==(o=d())&&!e&&(t&&t.header&&_modal.find("div.header").empty().append('<h4 class="title">'+t.header(a)+"</h4>"),_modal.find("div.content").empty().append(o),_modal.parent().hasClass("dimmer")||_modal.appendTo("body"),_modal.modal({onHide:l}).modal("show"),!0):_original(a,e,d,l)}};export default DataTable;
