@@ -1,16 +1,15 @@
 {
     "name": "datatables.net-responsive-se",
     "description": "Responsive for DataTables with styling for [SemanticUI](https://semantic-ui.com/)",
-    "main": "js/responsive.semanticui.js",
-    "module": "js/responsive.semanticui.mjs",
-    "style": "css/responsive.semanticui.css",
+    "main": "./js/responsive.semanticui.js",
+    "module": "./js/responsive.semanticui.mjs",
+    "style": "./css/responsive.semanticui.css",
     "types": "./types/responsive.semanticui.d.ts",
     "version": "4.0.3",
     "files": [
-        "css/**/*.css",
-        "js/**/*.js",
-        "js/**/*.mjs",
-        "types/**/*.d.ts"
+        "js",
+        "css",
+        "types"
     ],
     "keywords": [
         "Responsive",
@@ -36,5 +35,24 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/DataTables/Responsive.git"
-    }
+    },
+    "exports": {
+        ".": {
+            "types": "./types/responsive.semanticui.d.ts",
+            "import": "./js/responsive.semanticui.mjs",
+            "default": "./js/responsive.semanticui.mjs",
+            "require": "./js/responsive.semanticui.js"
+        },
+        "./js/*": "./js/*",
+        "./css": {
+            "types": "./types/css.d.ts",
+            "default": "./css/responsive.semanticui.css"
+        },
+        "./css/*": {
+            "types": "./types/css.d.ts",
+            "default": "./css/*"
+        },
+        "./package.json": "./package.json"
+    },
+    "sideEffects": true
 }
