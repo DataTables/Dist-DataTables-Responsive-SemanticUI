@@ -39,9 +39,10 @@
     "exports": {
         ".": {
             "types": "./types/responsive.semanticui.d.ts",
+            "style": "./css/responsive.semanticui.css",
             "import": "./js/responsive.semanticui.mjs",
-            "default": "./js/responsive.semanticui.mjs",
-            "require": "./js/responsive.semanticui.js"
+            "require": "./js/responsive.semanticui.js",
+            "default": "./js/responsive.semanticui.mjs"
         },
         "./js/*": "./js/*",
         "./css": {
